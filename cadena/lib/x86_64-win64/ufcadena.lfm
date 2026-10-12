@@ -1,0 +1,366 @@
+object Form1: TForm1
+  Left = 300
+  Height = 588
+  Top = 150
+  Width = 950
+  Caption = 'Clase Cadena'
+  ClientHeight = 588
+  ClientWidth = 950
+  Color = 16744576
+  DesignTimePPI = 120
+  Position = poScreenCenter
+  LCLVersion = '4.8.0.0'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object lblCadena: TLabel
+    Left = 20
+    Height = 22
+    Top = 25
+    Width = 68
+    Caption = 'Cadena:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -17
+    Font.Name = 'Berlin Sans FB'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtCadena: TEdit
+    Left = 100
+    Height = 28
+    Top = 20
+    Width = 830
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object lblLargo: TLabel
+    Left = 100
+    Height = 17
+    Top = 58
+    Width = 87
+    Caption = 'Largo: 0 / 255'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Berlin Sans FB'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object gbDatos: TGroupBox
+    Left = 20
+    Height = 125
+    Top = 90
+    Width = 910
+    Caption = 'Datos de entrada'
+    ClientHeight = 102
+    ClientWidth = 906
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Berlin Sans FB'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+    object lblTexto: TLabel
+      Left = 20
+      Height = 18
+      Top = 12
+      Width = 113
+      Caption = 'Texto / Palabra:'
+      ParentColor = False
+    end
+    object edtTexto: TEdit
+      Left = 162
+      Height = 26
+      Top = 8
+      Width = 288
+      TabOrder = 0
+    end
+    object lblPos: TLabel
+      Left = 475
+      Height = 18
+      Top = 12
+      Width = 55
+      Caption = 'Pos / N:'
+      ParentColor = False
+    end
+    object edtPos: TEdit
+      Left = 550
+      Height = 26
+      Top = 8
+      Width = 75
+      TabOrder = 1
+    end
+    object lblPos2: TLabel
+      Left = 650
+      Height = 18
+      Top = 12
+      Width = 41
+      Caption = 'Pos 2:'
+      ParentColor = False
+    end
+    object edtPos2: TEdit
+      Left = 719
+      Height = 26
+      Top = 8
+      Width = 75
+      TabOrder = 2
+    end
+    object btnCargar: TButton
+      Left = 20
+      Height = 35
+      Top = 52
+      Width = 175
+      Caption = 'Cargar cadena'
+      TabOrder = 3
+      OnClick = btnCargarClick
+    end
+    object btnLimpiar: TButton
+      Left = 210
+      Height = 35
+      Top = 52
+      Width = 175
+      Caption = 'Limpiar'
+      TabOrder = 4
+      OnClick = btnLimpiarClick
+    end
+  end
+  object gbChar: TGroupBox
+    Left = 20
+    Height = 82
+    Top = 230
+    Width = 910
+    Caption = 'Caracteres'
+    ClientHeight = 59
+    ClientWidth = 906
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Berlin Sans FB'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 2
+    object btnAddChar: TButton
+      Left = 15
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'addChar'
+      TabOrder = 0
+      OnClick = btnAddCharClick
+    end
+    object btnInsChar: TButton
+      Left = 140
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'insChar'
+      TabOrder = 1
+      OnClick = btnInsCharClick
+    end
+    object btnElimChar: TButton
+      Left = 265
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'elimChar'
+      TabOrder = 2
+      OnClick = btnElimCharClick
+    end
+    object btnInterChar: TButton
+      Left = 390
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'interChar'
+      TabOrder = 3
+      OnClick = btnInterCharClick
+    end
+    object btnCantChar: TButton
+      Left = 515
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'cantChar'
+      TabOrder = 4
+      OnClick = btnCantCharClick
+    end
+    object btnGetChar: TButton
+      Left = 640
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'getChar'
+      TabOrder = 5
+      OnClick = btnGetCharClick
+    end
+    object btnBusqChar: TButton
+      Left = 765
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'busqChar'
+      TabOrder = 6
+      OnClick = btnBusqCharClick
+    end
+  end
+  object gbPal: TGroupBox
+    Left = 20
+    Height = 82
+    Top = 325
+    Width = 910
+    Caption = 'Palabras'
+    ClientHeight = 59
+    ClientWidth = 906
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Berlin Sans FB'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 3
+    object btnCantPal: TButton
+      Left = 15
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'cantPal'
+      TabOrder = 0
+      OnClick = btnCantPalClick
+    end
+    object btnInsPal: TButton
+      Left = 140
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'insPal'
+      TabOrder = 1
+      OnClick = btnInsPalClick
+    end
+    object btnElimPal: TButton
+      Left = 265
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'elimPal'
+      TabOrder = 2
+      OnClick = btnElimPalClick
+    end
+    object btnCambPal: TButton
+      Left = 390
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'cambPal'
+      TabOrder = 3
+      OnClick = btnCambPalClick
+    end
+    object btnBuscPal: TButton
+      Left = 515
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'buscPal'
+      TabOrder = 4
+      OnClick = btnBuscPalClick
+    end
+    object btnAddPal: TButton
+      Left = 640
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'addPal'
+      TabOrder = 5
+      OnClick = btnAddPalClick
+    end
+  end
+  object gbOtros: TGroupBox
+    Left = 20
+    Height = 82
+    Top = 420
+    Width = 910
+    Caption = 'Otras operaciones'
+    ClientHeight = 59
+    ClientWidth = 906
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Berlin Sans FB'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 4
+    object btnInvertir: TButton
+      Left = 15
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'invertir'
+      TabOrder = 0
+      OnClick = btnInvertirClick
+    end
+    object btnRotar: TButton
+      Left = 140
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'rotar'
+      TabOrder = 1
+      OnClick = btnRotarClick
+    end
+    object btnMayusculas: TButton
+      Left = 265
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'mayusculas'
+      TabOrder = 2
+      OnClick = btnMayusculasClick
+    end
+    object btnMinusculas: TButton
+      Left = 390
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'minusculas'
+      TabOrder = 3
+      OnClick = btnMinusculasClick
+    end
+    object btnTitulo: TButton
+      Left = 515
+      Height = 38
+      Top = 8
+      Width = 120
+      Caption = 'Titulo'
+      TabOrder = 4
+      OnClick = btnTituloClick
+    end
+  end
+  object lblRes: TLabel
+    Left = 20
+    Height = 18
+    Top = 530
+    Width = 74
+    Caption = 'Resultado:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Berlin Sans FB'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtResultado: TEdit
+    Left = 112
+    Height = 28
+    Top = 525
+    Width = 818
+    ReadOnly = True
+    TabOrder = 5
+  end
+end
